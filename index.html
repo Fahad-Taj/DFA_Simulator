@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="DFA_main_screen">
+
+        <div id="DFA_heading">
+            DFA Simulator
+        </div>
+
+        <div id="DFA_information">
+            A DFA consists of 5 tuples, they are:
+            <ul>
+                <li>Q = Set of all states</li>
+                <li>Σ = Set of all alphabets</li>
+                <li>q0 = Initial state</li>
+                <li>F = Set of Final states</li>
+                <li>δ = Transition function</li>
+            </ul>
+        </div>
+
+        <div id="DFA_start_form">
+
+            <!-- value="q0, q1, q2, q3"
+            value="0, 1"
+            value="q0"
+            value="q2" -->
+            <p style="text-align: center; margin: 10px 10px 15px 10px;">Entries should be seperated by a comma ','</p>
+            Q = <input type="text" id="DFA_Q" class="DFA_start_form_input_element"  > <br>
+            Σ = <input type="text" id="DFA_sigma" class="DFA_start_form_input_element" > <br>
+            q0 = <input type="text" id="DFA_q0" class="DFA_start_form_input_element" > <br>
+            F = <input type="text" id="DFA_F" class="DFA_start_form_input_element" > <br>
+            
+            <button id="DFA_start_form_submit" onclick="getRawInput()">Submit</button>
+            
+            <div id="DFA_transition_table_container">
+                
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="string_input_container">
+        <p>Enter the string: <input type="text" id="string_input_text"></p>
+        <button id="string_input_button" onclick="animateDFA()"> Submit</button>
+
+        <div id="string_result_text">
+
+        </div>
+    </div>
+
+    <div id="graph_container">
+        
+    </div>
+    
+    <script src="DFAScript.js"></script>
+</body>
+</html>
